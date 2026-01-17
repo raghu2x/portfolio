@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
       className="section py-24 relative"
       style={{ "--section-index": "3" } as React.CSSProperties}
     >
-      <div className="absolute bottom-0 left-0 -z-10 h-[30rem] w-[30rem] rounded-full bg-primary/5 blur-[100px]" />
+      <div className="absolute bottom-0 left-0 -z-10 h-120 w-120 rounded-full bg-primary/5 blur-[100px]" />
 
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
                   key={index}
                   className="glass-card p-5 rounded-xl flex items-start space-x-4 transition-transform hover:translate-y-[-5px]"
                 >
-                  <div className="flex-shrink-0">{item.icon}</div>
+                  <div className="shrink-0">{item.icon}</div>
                   <div>
                     <h3 className="text-lg font-medium text-foreground">
                       {item.title}
@@ -128,7 +128,7 @@ const Contact: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="glass-card p-6 rounded-xl lg:col-span-2 shadow-sm"
+              className="glass-card p-6 rounded-xl lg:col-span-2 shadow-xs"
             >
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -196,7 +196,7 @@ const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90 disabled:opacity-70 button-glow w-full"
+                    className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-xs transition-all hover:bg-primary/90 disabled:opacity-70 button-glow w-full"
                   >
                     {isSubmitting ? (
                       <span className="inline-flex items-center">

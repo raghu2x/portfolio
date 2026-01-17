@@ -30,21 +30,21 @@ const Index: React.FC = () => {
       <div className="relative w-full overflow-hidden">
         {/* Floating gradient orbs */}
         <div 
-          className="fixed top-20 right-10 -z-10 h-[25rem] w-[25rem] rounded-full bg-primary/10 blur-[150px]"
+          className="fixed top-20 right-10 -z-10 h-100 w-100 rounded-full bg-primary/10 blur-[150px]"
           style={{ 
             transform: `translate3d(${scrollY * 0.02}px, ${-scrollY * 0.05}px, 0)` 
           }}
         />
         
         <div 
-          className="fixed bottom-20 left-10 -z-10 h-[30rem] w-[30rem] rounded-full bg-accent/10 blur-[150px]"
+          className="fixed bottom-20 left-10 -z-10 h-120 w-120 rounded-full bg-accent/10 blur-[150px]"
           style={{ 
             transform: `translate3d(${-scrollY * 0.03}px, ${scrollY * 0.03}px, 0)` 
           }}
         />
 
         <div 
-          className="fixed top-[40%] left-[30%] -z-10 h-[20rem] w-[20rem] rounded-full bg-blue-200/5 blur-[120px]"
+          className="fixed top-[40%] left-[30%] -z-10 h-80 w-[20rem] rounded-full bg-blue-200/5 blur-[120px]"
           style={{ 
             transform: `translate3d(${scrollY * 0.04}px, ${-scrollY * 0.02}px, 0)` 
           }}

@@ -18,13 +18,14 @@ const Hero: React.FC = () => {
       { threshold: 0.1 }
     );
 
-    if (headingRef.current) {
-      observer.observe(headingRef.current);
+    const headingEle = headingRef.current
+    if (headingEle) {
+      observer.observe(headingEle);
     }
 
     return () => {
-      if (headingRef.current) {
-        observer.unobserve(headingRef.current);
+      if (headingEle) {
+        observer.unobserve(headingEle);
       }
     };
   }, []);
@@ -34,7 +35,7 @@ const Hero: React.FC = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 lg:pt-0"
     >
-      <div className="absolute top-0 right-0 -z-10 h-[30rem] w-[30rem] rounded-full bg-primary/10 blur-[100px]" />
+      <div className="absolute top-0 right-0 -z-10 h-120 w-120 rounded-full bg-primary/10 blur-[100px]" />
 
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -78,13 +79,13 @@ const Hero: React.FC = () => {
             >
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:bg-primary/90 button-glow"
+                className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-xs transition-all hover:bg-primary/90 button-glow"
               >
                 View Projects
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
+                className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-medium text-foreground shadow-xs transition-colors hover:bg-accent hover:text-accent-foreground"
               >
                 Contact Me
               </a>
@@ -135,7 +136,7 @@ const Hero: React.FC = () => {
                 initial={{ rotateX: 0, rotateY: 0 }}
                 animate={{ rotateX: 10, rotateY: -15 }}
                 transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
-                className="aspect-square rounded-2xl glass-card relative overflow-hidden max-w-[450px] mx-auto"
+                className="aspect-square rounded-2xl glass-card relative overflow-hidden max-w-112.5 mx-auto"
               >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(120,119,198,0.12),transparent_40%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,108,255,0.12),transparent_40%)]" />
@@ -169,7 +170,7 @@ const Hero: React.FC = () => {
             repeatType: "reverse",
             repeatDelay: 0.5
           }}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20 shadow-sm text-primary"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 backdrop-blur-xs border border-primary/20 shadow-xs text-primary"
         >
           <ArrowDown size={20} />
         </motion.a>
