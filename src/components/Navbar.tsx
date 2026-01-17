@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from "react";
-import { Link as RouterLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X, Code } from "lucide-react";
 
@@ -47,7 +46,7 @@ const Navbar: React.FC = () => {
             <span className="p-1.5 bg-primary/10 rounded">
               <Code className="w-5 h-5 text-primary" />
             </span>
-            <span><span className="text-gradient">Dev</span>Portfolio</span>
+            <span><span className="text-gradient">Raghav</span> Portfolio</span>
           </a>
 
           {/* Desktop Navigation */}

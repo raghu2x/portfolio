@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 lg:pt-0"
     >
       <div className="absolute top-0 right-0 -z-10 h-[30rem] w-[30rem] rounded-full bg-primary/10 blur-[100px]" />
 
@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/raghvendra-yadav"
                 target="_blank"
                 rel="noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
